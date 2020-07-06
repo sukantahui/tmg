@@ -1,0 +1,151 @@
+<app-gallery></app-gallery>
+<div fxLayout.xs="column" fxLayout="row" fxFlexFill>
+  <div fxFlex="10" >
+    <app-sidebar></app-sidebar>
+  </div>
+  <div fxFlex="50" >
+    <!--carousel-->
+    <app-picture-carousel></app-picture-carousel>
+  </div>
+  <div fxFlex="60" style="background-color: #c679a9;">
+    <div class="cards" fxLayout.xs="column" fxLayout="row wrap"  fxLayoutGap="20px"   fxLayoutAlign="start start">
+
+
+      <mat-card class="image-card">
+          <mat-card-header>
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+          </mat-card-header>
+          <img mat-card-image src="https://live.staticflickr.com/65535/49913008061_6e00d232d6_n.jpg" alt="Photo of a Shiba Inu">
+          <mat-card-content>
+            <p>
+              The Shiba Inu is the smallest of the six original.
+            </p>
+          </mat-card-content>
+        </mat-card>
+      <mat-card class="image-card">
+          <mat-card-header>
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+          </mat-card-header>
+          <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+          <mat-card-content>
+            <p>
+              The Shiba Inu is the smallest of the six original.
+            </p>
+          </mat-card-content>
+        </mat-card>
+      <mat-card class="image-card">
+          <mat-card-header>
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+          </mat-card-header>
+          <img mat-card-image src="assets/images/DSC_0319.jpg" alt="Photo of a Shiba Inu">
+          <mat-card-content>
+            <p>
+              The Shiba Inu is the smallest of the six original.
+            </p>
+          </mat-card-content>
+        </mat-card>
+      <mat-card class="image-card">
+          <mat-card-header>
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+          </mat-card-header>
+          <img mat-card-image src="assets/images/DSC_0318.jpg" alt="Photo of a Shiba Inu">
+          <mat-card-content>
+            <p>
+              The Shiba Inu is the smallest of the six original.
+            </p>
+          </mat-card-content>
+        </mat-card>
+
+
+      <div class="picture-ripple-container mat-elevation-z4"
+           matRipple
+           [matRippleCentered]="centered"
+           [matRippleDisabled]="disabled"
+           [matRippleUnbounded]="unbounded"
+           [matRippleRadius]="radius"
+           [matRippleColor]="color">
+        <mat-card class="image-card">
+          <mat-card-header>
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+          </mat-card-header>
+          <img mat-card-image src="assets/images/DSC_0319.jpg" alt="Photo of a Shiba Inu">
+          <mat-card-content>
+            <p>
+              The Shiba Inu is the smallest of the six original.
+            </p>
+          </mat-card-content>
+        </mat-card>
+      </div>
+
+      <div class="picture-ripple-container mat-elevation-z4"
+           matRipple
+           [matRippleCentered]="centered"
+           [matRippleDisabled]="disabled"
+           [matRippleUnbounded]="unbounded"
+           [matRippleRadius]="radius"
+           [matRippleColor]="color">
+        <mat-card class="image-card">
+          <mat-card-header>
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+          </mat-card-header>
+          <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+          <mat-card-content>
+            <p>
+              The Shiba Inu is the smallest of the six original.
+            </p>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--<div class="navigate">-->
+<!--  <nav>-->
+<!--    <div id="logo"><img src="images/logo.png" alt="AMD logo"></div>-->
+
+<!--    <label for="drop" class="toggle">Menu</label>-->
+<!--    <input type="checkbox" id="drop" />-->
+<!--    <ul class="menu">-->
+<!--      <li><a href="index.php">Home</a></li>-->
+<!--      <li> <a href="about.php">About</a></li>-->
+<!--      <li><a href="contact.php">Contact</a></li>-->
+<!--    </ul>-->
+<!--  </nav>-->
+<!--</div>-->
+<!--<div class="container">-->
+<!--  <app-picture-carousel></app-picture-carousel>-->
+<!--  <div class="spread1">-->
+<!--    <div class="imgHolder">-->
+<!--      <img class="img1" src="http://placehold.it/50x50/000/fff?text=1'" alt="img1" />-->
+<!--      <img class="img2" src='http://placehold.it/50x50/0ff/000?text=2' alt="img 2" />-->
+<!--      <img class="img3" src="http://placehold.it/50x50/83d800/000?text=3" alt="img 3" />-->
+<!--      <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">-->
+
+<!--    </div>-->
+<!--  </div>-->
+<!--          <mat-card class="image-card">-->
+<!--            <mat-card-header>-->
+<!--              <div mat-card-avatar class="example-header-image"></div>-->
+<!--              <mat-card-subtitle>Dog Breed</mat-card-subtitle>-->
+<!--            </mat-card-header>-->
+<!--            <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">-->
+<!--            <mat-card-content>-->
+<!--              <p>-->
+<!--                The Shiba Inu is the smallest of the six original.-->
+<!--              </p>-->
+<!--            </mat-card-content>-->
+<!--          </mat-card>-->
+<!--</div>-->
+
+
+
+
+
+
