@@ -8,3 +8,21 @@
   color: black;
 }
 
+mat-toolbar{
+  background-color: #1673e8;
+  height: auto !important;
+  min-height: auto !important;
+}
+mat-toolbar .contact{
+  color: #f2f2f2;
+}
+mat-toolbar .social a{
+  margin-right: 10px;
+  color: #f2f2f2;
+}
+mat-toolbar .contact .email{
+  font-family: Perpetua;
+  color: #f2f2f2;
+}
+
+

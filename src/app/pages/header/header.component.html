@@ -1,20 +1,29 @@
 <!--//https://www.angularjswiki.com/angular/angular-material-icons-list-mat-icon-list/-->
-<mat-toolbar  class="mat-elevation-z6" color="primary">
-  <button mat-icon-button (click)="generalService.toggledSideBar()">
-    <mat-icon>menu</mat-icon>
-  </button>
-  <div class="container d-flex">
-    <div class="contact-info mr-auto">
-      <mat-icon> email</mat-icon> <a href="#"> Kunjad@timemanagementgroup.in</a>
-      <i class="icofont-phone"></i> <i class="fa fa-money fa-1x"></i>9230889052
+<mat-toolbar  class="mat-elevation-z6 ">
+  <div fxLayout.xs="column" fxLayout="row center" fxFlexFill>
+    <div fxFlex="none" >
+          <button mat-icon-button (click)="generalService.toggledSideBar()">
+            <mat-icon>menu</mat-icon>
+          </button>
     </div>
-    <div class="social-links">
-      <a href="#" class="twitter"><i class="icofont-twitter"></i></a>
-      <a href="#" class="facebook"><i class="icofont-facebook"></i></a>
-      <a href="#" class="instagram"><i class="icofont-instagram"></i></a>
-      <a href="#" class="skype"><i class="icofont-skype"></i></a>
-      <a href="#" class="linkedin"><i class="icofont-linkedin"></i></a>
+    <div fxFlex fxFlexOffset="15" fxLayout="row"  fxLayoutAlign="start center" class="contact">
+      <div><i class="fa fa-envelope" aria-hidden="true"></i><a href="#" class="email"> Kunjad@timemanagementgroup.in</a></div>
+      <div><i class="fa fa-phone" aria-hidden="true"></i><a href="#" class="email">9230889052</a></div>
     </div>
+    <div fxLayout="row"  fxLayoutAlign="space-evenly center" class="social">
+      <a href="#" class="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+      <a href="#" class="facebook"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+      <a href="#" class="instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+      <a href="#" class="skype"><i class="fa fa-skype" aria-hidden="true"></i></a>
+      <a href="#" class="linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+    </div>
+<!--    <div fxFlex fx-layout-align="end">-->
+<!--            <a href="#" class="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>-->
+<!--            <a href="#" class="facebook"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>-->
+<!--            <a href="#" class="instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>-->
+<!--            <a href="#" class="skype"><i class="fa fa-skype" aria-hidden="true"></i></a>-->
+<!--            <a href="#" class="linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i></a>-->
+<!--    </div>-->
   </div>
 </mat-toolbar>
 
