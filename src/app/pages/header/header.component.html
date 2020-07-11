@@ -1,5 +1,5 @@
 <!--//https://www.angularjswiki.com/angular/angular-material-icons-list-mat-icon-list/-->
-<mat-toolbar  class="mat-elevation-z6 ">
+<mat-toolbar id="topbar" [class.topbar-chnage]="header_variable"  class="mat-elevation-z6 ">
   <div fxLayout.xs="column" fxLayout="row center" fxFlexFill>
     <div fxFlex="none" >
           <button mat-icon-button (click)="generalService.toggledSideBar()">
@@ -26,4 +26,43 @@
 <!--    </div>-->
   </div>
 </mat-toolbar>
+
+<header id="header" class="fixed-top">
+  <div class="container d-flex align-items-center">
+
+    <!--<h1 class="logo mr-auto"><a href="index.html">BizLand<span>.</span></a></h1>-->
+    <!-- Uncomment below if you prefer to use an image logo -->
+    <a href="index.php" class="logo"><img src="img/logo/logo.png" alt=""></a>
+    <h2 class="logo text-left"><a href="index.php">Time Management Group</a></h2>
+    <nav class="nav-menu d-none d-lg-block">
+      <ul>
+        <li class="active"><a href="index.php">Home</a></li>
+        <li class="drop-down"><a href="#">About Us</a>
+          <ul>
+            <li class="drop-down"><a href="#">The Company</a>
+              <ul>
+                <li><a href="company_profile.php">Company's Profile</a></li>
+                <li><a href="mission_vision.php">Mission and Vision</a></li>
+              </ul>
+            </li>
+            <li><a href="infrastructure.php">Infrastructure</a></li>
+            <li><a href="network.php">Network</a></li>
+            <li><a href="why_us.php">Why Us!!</a></li>
+            <li><a href="clientele.php">Clientele</a></li>
+          </ul>
+        </li>
+        <li class="drop-down"><a href="#">Services</a>
+          <ul>
+            <li><a href="logistics.php">Logistics</a></li>
+            <li><a href="warehousing.php">Warehousing</a></li>
+            <li><a href="courier.php">Courier</a></li>
+            <li><a href="ecommerce.php">Ecommerce</a></li>
+          </ul>
+        </li>
+
+      </ul>
+    </nav><!-- .nav-menu -->
+
+  </div>
+</header><!-- End Header -->
 
