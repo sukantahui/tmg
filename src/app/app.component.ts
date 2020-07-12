@@ -1,11 +1,11 @@
-import {ChangeDetectionStrategy, Component, OnDestroy, OnInit, ViewChild} from '@angular/core';
+import {ChangeDetectionStrategy, Component, HostListener, OnDestroy, OnInit, ViewChild} from '@angular/core';
 import { NgbButtonsModule } from '@ng-bootstrap/ng-bootstrap';
 import {NgbDateStruct} from '@ng-bootstrap/ng-bootstrap';
 import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 import { faBaby } from '@fortawesome/free-solid-svg-icons';
 
 import { MediaObserver, MediaChange } from '@angular/flex-layout';
-import { Subscription } from 'rxjs';
+import {Observable, Subscription} from 'rxjs';
 import {AuthService} from './services/auth.service';
 import {VERSION} from '@angular/material/core';
 // import {VERSION} from '@angular/material';
@@ -20,6 +20,12 @@ import {GeneralService} from './services/general.service';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AppComponent implements OnInit, OnDestroy{
+
+  constructor(private bpo: BreakpointObserver
+              , public mediaObserver: MediaObserver
+              , private authService: AuthService
+              , public generalService: GeneralService){
+  }
   title = 'base-project';
   active = 1;
   events: string[] = [];
@@ -33,10 +39,9 @@ export class AppComponent implements OnInit, OnDestroy{
   layoutGap = '64';
   fixedInViewport = true;
 
-  constructor(private bpo: BreakpointObserver
-              , public mediaObserver: MediaObserver
-              , private authService: AuthService
-              , public generalService: GeneralService){
+  @HostListener('document:scroll', [])
+  scrollHandler(event) {
+    console.log('You just scolled');
   }
   ngOnInit(): void {
       this.mediaSub = this.mediaObserver.media$.subscribe(
@@ -92,5 +97,9 @@ export class AppComponent implements OnInit, OnDestroy{
 
   ngOnDestroy(): void {
     this.mediaSub.unsubscribe();
+  }
+
+  scrollChanged($event) {
+    console.log('Working');
   }
 }

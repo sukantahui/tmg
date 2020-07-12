@@ -43,6 +43,7 @@ import {GalleryModule} from 'ng-gallery';
 import { LightboxModule } from 'ng-gallery/lightbox';
 import { GmapComponent } from './pages/gmap/gmap.component';
 import {GoogleMapsModule} from '@angular/google-maps';
+import { ScrollDirective } from './scroll.directive';
 
 
 @NgModule({
@@ -62,7 +63,8 @@ import {GoogleMapsModule} from '@angular/google-maps';
     LoaidngRollerComponent,
     SidebarComponent,
     GalleryComponent,
-    GmapComponent
+    GmapComponent,
+    ScrollDirective
 
   ],
   imports: [

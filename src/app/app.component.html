@@ -60,7 +60,7 @@
 <!--  </div>-->
 <!--</div>-->
 
-
+<div appScroll (scrollPosition)="scrollChanged($event)" style="overflow: scroll; height: 100%; width: 100%;" (scroll)="scrollHandler($event)">
 <app-header></app-header>
 
 <mat-sidenav-container class="main-sidenav-container" (backdropClick)="generalService.toggledSideBar()">
@@ -77,7 +77,7 @@
     <router-outlet></router-outlet>
   </div>
 </mat-sidenav-container>
-
+</div>
 <!--
 Copyright Google LLC All Rights Reserved.
 
