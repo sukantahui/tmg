@@ -44,6 +44,7 @@ import { LightboxModule } from 'ng-gallery/lightbox';
 import { GmapComponent } from './pages/gmap/gmap.component';
 import {GoogleMapsModule} from '@angular/google-maps';
 import { ScrollDirective } from './scroll.directive';
+import {ScrollEventModule} from "ngx-scroll-event";
 
 
 @NgModule({
@@ -85,7 +86,8 @@ import { ScrollDirective } from './scroll.directive';
     SidebarModule,
     GalleryModule,
     LightboxModule,
-    GoogleMapsModule
+    GoogleMapsModule,
+    ScrollEventModule
   ],
   providers: [{provide: HTTP_INTERCEPTORS, useClass: AuthInterceptorInterceptor, multi: true},
               {provide: DateAdapter, useClass: DateFormat} ],

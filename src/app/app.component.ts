@@ -12,6 +12,7 @@ import {VERSION} from '@angular/material/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { map } from 'rxjs/operators';
 import {GeneralService} from './services/general.service';
+import {ScrollEvent} from 'ngx-scroll-event';
 
 @Component({
   selector: 'app-root',
@@ -42,6 +43,20 @@ export class AppComponent implements OnInit, OnDestroy{
   @HostListener('document:scroll', [])
   scrollHandler(event) {
     console.log('You just scolled');
+  }
+
+  public handleScroll(event: ScrollEvent) {
+    console.log('scroll occurred', event.originalEvent);
+    if (event.isReachingBottom) {
+      console.log(`the user is reaching the bottom`);
+    }
+    if (event.isReachingTop) {
+      console.log(`the user is reaching the Top`);
+    }
+    if (event.isWindowEvent) {
+      console.log(`This event is fired on Window not on an element.`);
+    }
+
   }
   ngOnInit(): void {
       this.mediaSub = this.mediaObserver.media$.subscribe(
