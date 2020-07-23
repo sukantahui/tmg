@@ -873,3 +873,7 @@ background-size: cover;
   width: 100%;
   z-index: 1;
 }
+
+.drop-down a::after{
+  content: '\002207' !important;
+}

@@ -29,11 +29,74 @@
 
 <header id="header" class="fixed-top">
   <div class="container d-flex align-items-center">
-
-    <!--<h1 class="logo mr-auto"><a href="index.html">BizLand<span>.</span></a></h1>-->
-    <!-- Uncomment below if you prefer to use an image logo -->
-    <a href="index.php" class="logo"><img src="img/logo/logo.png" alt=""></a>
+    <a href="index.php" class="logo"><img src="assets/img/logo/logo.png" alt=""></a>
     <h2 class="logo text-left"><a href="index.php">Time Management Group</a></h2>
+    <div ngbDropdown class="">
+      <button class="btn" id="dropdownBasic2"  ngbDropdownToggle>My Toggle dropdown</button>
+      <div ngbDropdownMenu aria-labelledby="dropdownBasic2">
+        <button ngbDropdownItem>Action - 1</button>
+        <button ngbDropdownItem>Another Action</button>
+        <button ngbDropdownItem>Something else is here</button>
+      </div>
+    </div>
+
+    <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item >Customer</button>
+      <button mat-menu-item >Product</button>
+    </mat-menu>
+
+    <!--for huge menus-->
+    <button mat-button [matMenuTriggerFor]="animals">Animal index</button>
+
+    <mat-menu #animals="matMenu">
+      <button mat-menu-item [matMenuTriggerFor]="vertebrates">Vertebrates</button>
+      <button mat-menu-item [matMenuTriggerFor]="invertebrates">Invertebrates</button>
+    </mat-menu>
+
+    <mat-menu #vertebrates="matMenu">
+      <button mat-menu-item [matMenuTriggerFor]="fish">Fishes</button>
+      <button mat-menu-item [matMenuTriggerFor]="amphibians">Amphibians</button>
+      <button mat-menu-item [matMenuTriggerFor]="reptiles">Reptiles</button>
+      <button mat-menu-item>Birds</button>
+      <button mat-menu-item>Mammals</button>
+    </mat-menu>
+
+    <mat-menu #invertebrates="matMenu">
+      <button mat-menu-item>Insects</button>
+      <button mat-menu-item>Molluscs</button>
+      <button mat-menu-item>Crustaceans</button>
+      <button mat-menu-item>Corals</button>
+      <button mat-menu-item>Arachnids</button>
+      <button mat-menu-item>Velvet worms</button>
+      <button mat-menu-item>Horseshoe crabs</button>
+    </mat-menu>
+
+    <mat-menu #fish="matMenu">
+      <button mat-menu-item>Baikal oilfish</button>
+      <button mat-menu-item>Bala shark</button>
+      <button mat-menu-item>Ballan wrasse</button>
+      <button mat-menu-item>Bamboo shark</button>
+      <button mat-menu-item>Banded killifish</button>
+    </mat-menu>
+
+    <mat-menu #amphibians="matMenu">
+      <button mat-menu-item>Sonoran desert toad</button>
+      <button mat-menu-item>Western toad</button>
+      <button mat-menu-item>Arroyo toad</button>
+      <button mat-menu-item>Yosemite toad</button>
+    </mat-menu>
+
+    <mat-menu #reptiles="matMenu">
+      <button mat-menu-item>Banded Day Gecko</button>
+      <button mat-menu-item>Banded Gila Monster</button>
+      <button mat-menu-item>Black Tree Monitor</button>
+      <button mat-menu-item>Blue Spiny Lizard</button>
+      <button mat-menu-item disabled>Velociraptor</button>
+    </mat-menu>
+    <!--for huge menus-->
+
+
     <nav class="nav-menu d-none d-lg-block">
       <ul>
         <li class="active"><a href="index.php">Home</a></li>
